@@ -8,19 +8,31 @@
             integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
 </head>
 <body>
-<aside>
+<aside class="nav">
+    <ul class="menu">
+        <li class="menu__item">
+            <button id="createRectangleButton" class="btn btn__color_lightblue">RECTANGLE</button>
 
+        </li>
+        <li class="menu__item">
+            <button id="createTriangleButton" class="btn btn__color_lightblue">TRIANGLE</button>
+        </li>
+        <li class="menu__item">
+            <button id="createCircleButton" class="btn btn__color_lightblue">CIRCLE</button>
+        </li>
+    </ul>
 </aside>
-<div class="main">
+<section class="main">
     <svg id="field" width="1280" height="1280">
         <defs>
-            <marker id="arrow" markerWidth="10" markerHeight="10" refx="10" refy="3" orient="auto" markerUnits="strokeWidth">
-                <path d="M0,0 L0,6 L9,3 z" fill="#f00" />
+            <marker id="arrow" markerWidth="10" markerHeight="10" refx="10" refy="3" orient="auto"
+                    markerUnits="strokeWidth">
+                <path d="M0,0 L0,6 L9,3 z" fill="black"/>
             </marker>
         </defs>
 
     </svg>
-</div>
+</section>
 <script src="js/release.js"></script>
 
 </body>

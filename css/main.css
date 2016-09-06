@@ -1,3 +1,26 @@
-.main{
-    margin-left: 250px;
+.main {
+    display: inline;
+    float:left;
+    position: absolute; /* Нет, нет, это не говнокод. Это для того, чтобы оффсет можно было константой задать*/
+    left:250px;
+}
+.nav {
+    background-color: #cccccc;
+}
+
+.btn {
+    min-height: 40px;
+    min-width: 100px;
+}
+
+.menu {
+    display: inline;
+    float:left;
+    max-width: 250px;
+
+}
+
+.menu__item {
+    padding: 3px;
+    list-style-type: none;
 }
