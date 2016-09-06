@@ -30,6 +30,30 @@ var currentShape = {};
 var drag = false;
 var oldX, oldY, newX, newY = 0;
 
+$("#createTriangleButton").on("click", function(event){
+    createTriangle(200,200,100);
+});
+$("#createCircleButton").on("click", function(event){
+    createCircle(200,200,100);
+});
+$("#createRectangleButton").on("click", function(event){
+    createRectangle(200,200,150,100);
+});
+
+
+$("#field").on("mouseup", function (event) {
+
+    if (drawingLine) {
+        lineStartObject.outerLines.push(currentLine);
+        drawingLine = false;
+        currentLine = {};
+        lineStartXY = {};
+    }
+    if (drag) {
+        drag = false;
+    }
+});
+
 
 $("#field").on("mousemove", function (event) {
 
@@ -89,23 +113,7 @@ $("#field").on("mousemove", function (event) {
     }
 
 });
-$("#field").on("mouseup", function (event) {
 
-    if (drawingLine) {
-        lineStartObject.outerLines.push(currentLine);
-        drawingLine = false;
-        currentLine = {};
-        lineStartXY = {};
-    }
-    if (drag) {
-        drag = false;
-    }
-});
-
-createRectangle(100, 200, 150, 100);
-createRectangle(350, 200, 150, 100);
-createCircle(500, 500, 100);
-createTriangle(550, 300, 100);
 
 function createOverlay() {
     var overlay = document.createElementNS(svgNS, "g");
